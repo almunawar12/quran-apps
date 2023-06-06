@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:quran_apps/screens/global.dart';
+import 'package:quran_apps/screens/home_screen.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -9,7 +11,7 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: background,
-      body:  SafeArea(
+      body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 30),
           child: Center(
@@ -17,26 +19,71 @@ class SplashScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-              Text(
-                'Quran App',
-                style: GoogleFonts.poppins(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 29,
-                ),),
+                Text(
+                  'Quran App',
+                  style: GoogleFonts.poppins(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 29,
+                  ),
+                ),
                 const SizedBox(
                   height: 16,
-                  ),
+                ),
                 Text(
                   'Larn Quran and\nRecite Once Every Day',
-                style: GoogleFonts.poppins(
-                  fontSize: 18,
-                  color: text,
+                  style: GoogleFonts.poppins(
+                    fontSize: 18,
+                    color: text,
+                  ),
+                  textAlign: TextAlign.center,
                 ),
-                textAlign: TextAlign.center,)
-            ],),
+                const SizedBox(
+                  height: 48,
+                ),
+                Stack(
+                  clipBehavior: Clip.none,
+                  children: [
+                    Container(
+                      height: 450,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(30),
+                          color: const Color(0xFF672CBC)),
+                      child: SvgPicture.asset('assets/svgs/splash.svg'),
+                    ),
+                    Positioned(
+                      left: 0,
+                      bottom: -23,
+                      right: 0,
+                      child: Center(
+                        child: GestureDetector(
+                          behavior: HitTestBehavior.opaque,
+                          onTap: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => const HomeScreen()));
+                          },
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 40, vertical: 16),
+                            decoration: BoxDecoration(
+                                color: orange,
+                                borderRadius: BorderRadius.circular(30)),
+                            child: Text(
+                              'Get Started',
+                              style: GoogleFonts.poppins(
+                                  fontWeight: FontWeight.w600, fontSize: 18),
+                            ),
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
+                )
+              ],
+            ),
           ),
-          ),
+        ),
       ),
     );
   }
