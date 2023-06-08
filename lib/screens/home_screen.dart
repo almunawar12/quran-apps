@@ -12,112 +12,169 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: background,
       appBar: _appBar(),
       bottomNavigationBar: _bottomNavigationBar(),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "Assalamualaikum",
-              style: GoogleFonts.poppins(
-                fontSize: 18,
-                fontWeight: FontWeight.w500,
-                color: text,
+      body: DefaultTabController(
+        length: 4,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24),
+          child: NestedScrollView(
+            headerSliverBuilder: (context, innerBoxIsScrolled) => [
+              SliverToBoxAdapter(
+                child: _greeting(),
               ),
-            ),
-            const SizedBox(
-              height: 4,
-            ),
-            Text(
-              "Rifki Almunawar",
-              style: GoogleFonts.poppins(
-                fontSize: 18,
-                fontWeight: FontWeight.w600,
-                color: Colors.white,
+              SliverAppBar(
+                pinned: true,
+                shape: Border(
+                  bottom: BorderSide(
+                    width: 3,
+                    color: const Color(0xFFAAAAAA).withOpacity(.3),
+                  ),
+                ),
+                elevation: 0,
+                backgroundColor: background,
+                automaticallyImplyLeading: false,
+                bottom: PreferredSize(
+                  preferredSize: const Size.fromHeight(0),
+                  child: _tab(),
+                ),
               ),
-            ),
-            const SizedBox(
-              height: 24,
-            ),
-            _lastRead(),
-          ],
+            ],
+            body: Container(),
+          ),
         ),
       ),
     );
   }
 
+  TabBar _tab() {
+    return TabBar(
+      unselectedLabelColor: text,
+      labelColor: Colors.white,
+      indicatorColor: primary,
+      indicatorWeight: 3,
+      tabs: [
+        _tabItem(label: "Surah"),
+        _tabItem(label: "Para"),
+        _tabItem(label: "Page"),
+        _tabItem(label: "Hijb"),
+      ],
+    );
+  }
+
+  Tab _tabItem({required String label}) {
+    return Tab(
+      child: Text(
+        label,
+        style: GoogleFonts.poppins(
+          fontSize: 16,
+          fontWeight: FontWeight.w600,
+        ),
+      ),
+    );
+  }
+
+  Column _greeting() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          "Assalamualaikum",
+          style: GoogleFonts.poppins(
+            fontSize: 18,
+            fontWeight: FontWeight.w500,
+            color: text,
+          ),
+        ),
+        const SizedBox(
+          height: 4,
+        ),
+        Text(
+          "Rifki Almunawar",
+          style: GoogleFonts.poppins(
+            fontSize: 18,
+            fontWeight: FontWeight.w600,
+            color: Colors.white,
+          ),
+        ),
+        const SizedBox(
+          height: 24,
+        ),
+        _lastRead(),
+      ],
+    );
+  }
+
   Stack _lastRead() {
     return Stack(
+      children: [
+        Container(
+          height: 131,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            gradient: const LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                stops: [
+                  0,
+                  0.6,
+                  1
+                ],
+                colors: [
+                  Color(0xFFDF98FA),
+                  Color(0xFFB070FD),
+                  Color(0xFF9055FF),
+                ]),
+          ),
+        ),
+        Positioned(
+          bottom: 0,
+          right: 0,
+          child: SvgPicture.asset('assets/svgs/quran.svg'),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                height: 131,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  gradient: const LinearGradient(
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                      stops: [
-                        0,
-                        0.6,
-                        1
-                      ],
-                      colors: [
-                        Color(0xFFDF98FA),
-                        Color(0xFFB070FD),
-                        Color(0xFF9055FF),
-                      ]),
+              Row(
+                children: [
+                  SvgPicture.asset('assets/svgs/book.svg'),
+                  const SizedBox(
+                    width: 8,
+                  ),
+                  Text(
+                    "Last Read",
+                    style: GoogleFonts.poppins(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Text(
+                "Al-Fatihah",
+                style: GoogleFonts.poppins(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 18,
                 ),
               ),
-              Positioned(
-                bottom: 0,
-                right: 0,
-                child: SvgPicture.asset('assets/svgs/quran.svg'),
+              const SizedBox(
+                height: 4,
               ),
-              Padding(
-                padding: const EdgeInsets.all(20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        SvgPicture.asset('assets/svgs/book.svg'),
-                        const SizedBox(
-                          width: 8,
-                        ),
-                        Text(
-                          "Last Read",
-                          style: GoogleFonts.poppins(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    Text(
-                      "Al-Fatihah",
-                      style: GoogleFonts.poppins(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w600,
-                        fontSize: 18,
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 4,
-                    ),
-                    Text(
-                      "Ayat No: 1",
-                      style: GoogleFonts.poppins(
-                        color: Colors.white,
-                      ),
-                    ),
-                  ],
+              Text(
+                "Ayat No: 1",
+                style: GoogleFonts.poppins(
+                  color: Colors.white,
                 ),
-              )
+              ),
             ],
-          );
+          ),
+        )
+      ],
+    );
   }
 
   BottomNavigationBar _bottomNavigationBar() => BottomNavigationBar(
