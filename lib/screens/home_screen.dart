@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:quran_apps/screens/global.dart';
+import 'package:quran_apps/tabs/hijb_tab.dart';
+import 'package:quran_apps/tabs/page_tab.dart';
+import 'package:quran_apps/tabs/para_tab.dart';
+import 'package:quran_apps/tabs/surah_tab.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -38,7 +42,14 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ],
-            body: Container(),
+            body: const TabBarView(
+              children: [
+                SurahTab(),
+                ParaTab(),
+                PageTab(),
+                HijbTab(),
+              ],
+            ),
           ),
         ),
       ),
