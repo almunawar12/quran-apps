@@ -61,7 +61,7 @@ class SurahTab extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    surah.nama,
+                    surah.namaLatin,
                     style: GoogleFonts.poppins(
                         color: Colors.white,
                         fontWeight: FontWeight.w500,
