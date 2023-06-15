@@ -1,31 +1,35 @@
 class Ayat {
-    int nomorAyat;
-    String teksArab;
-    String teksLatin;
-    String teksIndonesia;
-    Map<String, String> audio;
+  Ayat({
+    required this.id,
+    required this.surah,
+    required this.nomor,
+    required this.ar,
+    required this.tr,
+    required this.idn,
+  });
 
-    Ayat({
-        required this.nomorAyat,
-        required this.teksArab,
-        required this.teksLatin,
-        required this.teksIndonesia,
-        required this.audio,
-    });
+  int id;
+  int surah;
+  int nomor;
+  String ar;
+  String tr;
+  String idn;
 
-    factory Ayat.fromJson(Map<String, dynamic> json) => Ayat(
-        nomorAyat: json["nomorAyat"],
-        teksArab: json["teksArab"],
-        teksLatin: json["teksLatin"],
-        teksIndonesia: json["teksIndonesia"],
-        audio: Map.from(json["audio"]).map((k, v) => MapEntry<String, String>(k, v)),
-    );
+  factory Ayat.fromJson(Map<String, dynamic> json) => Ayat(
+        id: json["id"],
+        surah: json["surah"],
+        nomor: json["nomor"],
+        ar: json["ar"],
+        tr: json["tr"],
+        idn: json["idn"],
+      );
 
-    Map<String, dynamic> toJson() => {
-        "nomorAyat": nomorAyat,
-        "teksArab": teksArab,
-        "teksLatin": teksLatin,
-        "teksIndonesia": teksIndonesia,
-        "audio": Map.from(audio).map((k, v) => MapEntry<String, dynamic>(k, v)),
-    };
+  Map<String, dynamic> toJson() => {
+        "id": id,
+        "surah": surah,
+        "nomor": nomor,
+        "ar": ar,
+        "tr": tr,
+        "idn": idn,
+      };
 }

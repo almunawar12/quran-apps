@@ -1,3 +1,7 @@
+// To parse this JSON data, do
+//
+//     final surah = surahFromJson(jsonString);
+
 import 'dart:convert';
 
 import 'package:quran_apps/models/ayat.dart';
@@ -9,6 +13,17 @@ String surahToJson(List<Surah> data) =>
     json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
 class Surah {
+  Surah(
+      {required this.nomor,
+      required this.nama,
+      required this.namaLatin,
+      required this.jumlahAyat,
+      required this.tempatTurun,
+      required this.arti,
+      required this.deskripsi,
+      required this.audio,
+      this.ayat});
+
   int nomor;
   String nama;
   String namaLatin;
@@ -18,18 +33,6 @@ class Surah {
   String deskripsi;
   String audio;
   List<Ayat>? ayat;
-
-  Surah({
-    required this.nomor,
-    required this.nama,
-    required this.namaLatin,
-    required this.jumlahAyat,
-    required this.tempatTurun,
-    required this.arti,
-    required this.deskripsi,
-    required this.audio,
-    this.ayat,
-  });
 
   factory Surah.fromJson(Map<String, dynamic> json) => Surah(
       nomor: json["nomor"],
@@ -70,7 +73,9 @@ class EnumValues<T> {
   EnumValues(this.map);
 
   Map<T, String> get reverse {
-    reverseMap = map.map((k, v) => MapEntry(v, k));
+    if (reverseMap == null) {
+      reverseMap = map.map((k, v) => new MapEntry(v, k));
+    }
     return reverseMap;
   }
 }
