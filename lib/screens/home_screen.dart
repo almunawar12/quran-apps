@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:quran_apps/screens/global.dart';
-import 'package:quran_apps/tabs/hijb_tab.dart';
-import 'package:quran_apps/tabs/page_tab.dart';
-import 'package:quran_apps/tabs/para_tab.dart';
+// import 'package:quran_apps/tabs/hijb_tab.dart';
+// import 'package:quran_apps/tabs/page_tab.dart';
+// import 'package:quran_apps/tabs/para_tab.dart';
 import 'package:quran_apps/tabs/surah_tab.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -45,9 +45,9 @@ class HomeScreen extends StatelessWidget {
             body: const TabBarView(
               children: [
                 SurahTab(),
-                ParaTab(),
-                PageTab(),
-                HijbTab(),
+                // ParaTab(),
+                // PageTab(),
+                // HijbTab(),
               ],
             ),
           ),
@@ -64,9 +64,9 @@ class HomeScreen extends StatelessWidget {
       indicatorWeight: 3,
       tabs: [
         _tabItem(label: "Surah"),
-        _tabItem(label: "Para"),
-        _tabItem(label: "Page"),
-        _tabItem(label: "Hijb"),
+        // _tabItem(label: "Para"),
+        // _tabItem(label: "Page"),
+        // _tabItem(label: "Hijb"),
       ],
     );
   }
@@ -195,9 +195,9 @@ class HomeScreen extends StatelessWidget {
         showUnselectedLabels: false,
         items: [
           _bottomBar(icon: "assets/svgs/quran-icon.svg", label: "Quran"),
-          _bottomBar(icon: "assets/svgs/lamp-icon.svg", label: "Tips"),
-          _bottomBar(icon: "assets/svgs/pray-icon.svg", label: "Sholat"),
-          _bottomBar(icon: "assets/svgs/doa-icon.svg", label: "Doa"),
+          // _bottomBar(icon: "assets/svgs/lamp-icon.svg", label: "Tips"),
+          // _bottomBar(icon: "assets/svgs/pray-icon.svg", label: "Sholat"),
+          // _bottomBar(icon: "assets/svgs/doa-icon.svg", label: "Doa"),
           _bottomBar(icon: "assets/svgs/bookmark-icon.svg", label: "Bookmark"),
         ],
       );
