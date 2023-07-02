@@ -5,9 +5,9 @@
 <p> berikut merupakan tampilan dari aplikasi </p>
 
 <p align="center">
-<img src="assets/img/splash.png" width="300">
-<img src="assets/img/home.png" width="300">
-<img src="assets/img/details.png" width="300">
+<img src="https://drive.google.com/file/d/16QCyM-N79MMIYeUhf6aKEd1lTUzSGp2O/view?usp=sharing" width="300">
+<img src="https://drive.google.com/file/d/1MrVz6afmQ7vp-nQYwTCXhVTs6sR1wKhf/view?usp=sharing" width="300">
+<img src="https://drive.google.com/file/d/169Pz1sXlPw7CipQsPK1npz8sokzxpml4/view?usp=sharing" width="300">
 
 
 
