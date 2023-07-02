@@ -4,9 +4,9 @@
 
 <p> berikut merupakan tampilan dari aplikasi </p>
 <p align="center">
-<img src="https://lh3.googleusercontent.com/drive-viewer/AFGJ81p8KaR1S_MxDyci38pFbK8zEfyYU4Czfgq_N6Jy7v4IUy7ugYWSiwxtSlp8Rk01VWfpdD3Au7gGihHxpTQN_mJ6BrRogw=s1600" width="300">
-<img src="https://lh3.googleusercontent.com/drive-viewer/AFGJ81qv3RZHIRZR_l4h8LKBEHQlP0uksTvalxdmhJAeavOZY6agLg_Fyw5BQ4Ukrhk-INuLbwoVYn2LuipNpWMyoqOm1uYTBw=s1600" width="300">
-<img src="https://lh3.googleusercontent.com/drive-viewer/AFGJ81r1YNeM5zrIc9oaAg7zYmZhPYLQAK9yjpfzhoDPI1IpdC-w7oN5jUxqZlNZT6XNx26HfJkqt8QVenSyz65Z46Io5xwd3g=s1600" width="300">
+<img src="https://lh3.googleusercontent.com/drive-viewer/AFGJ81p8KaR1S_MxDyci38pFbK8zEfyYU4Czfgq_N6Jy7v4IUy7ugYWSiwxtSlp8Rk01VWfpdD3Au7gGihHxpTQN_mJ6BrRogw=s1600" width="100%">
+<img src="https://lh3.googleusercontent.com/drive-viewer/AFGJ81qv3RZHIRZR_l4h8LKBEHQlP0uksTvalxdmhJAeavOZY6agLg_Fyw5BQ4Ukrhk-INuLbwoVYn2LuipNpWMyoqOm1uYTBw=s1600" width="100%">
+<img src="https://lh3.googleusercontent.com/drive-viewer/AFGJ81r1YNeM5zrIc9oaAg7zYmZhPYLQAK9yjpfzhoDPI1IpdC-w7oN5jUxqZlNZT6XNx26HfJkqt8QVenSyz65Z46Io5xwd3g=s1600" width="100%">
 </p>
 
 
