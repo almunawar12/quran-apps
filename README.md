@@ -3,11 +3,11 @@
 <p>projek ini merupakan projek uas mata kuliah pemrograman mobile dan praktikum pemrograman mobile </p>
 
 <p> berikut merupakan tampilan dari aplikasi </p>
-
 <p align="center">
-<img src="https://drive.google.com/file/d/16QCyM-N79MMIYeUhf6aKEd1lTUzSGp2O/view?usp=sharing" width="300">
-<img src="https://drive.google.com/file/d/1MrVz6afmQ7vp-nQYwTCXhVTs6sR1wKhf/view?usp=sharing" width="300">
-<img src="https://drive.google.com/file/d/169Pz1sXlPw7CipQsPK1npz8sokzxpml4/view?usp=sharing" width="300">
+<img src="https://lh3.googleusercontent.com/drive-viewer/AFGJ81p8KaR1S_MxDyci38pFbK8zEfyYU4Czfgq_N6Jy7v4IUy7ugYWSiwxtSlp8Rk01VWfpdD3Au7gGihHxpTQN_mJ6BrRogw=s1600" width="300">
+<img src="https://lh3.googleusercontent.com/drive-viewer/AFGJ81qv3RZHIRZR_l4h8LKBEHQlP0uksTvalxdmhJAeavOZY6agLg_Fyw5BQ4Ukrhk-INuLbwoVYn2LuipNpWMyoqOm1uYTBw=s1600" width="300">
+<img src="https://lh3.googleusercontent.com/drive-viewer/AFGJ81r1YNeM5zrIc9oaAg7zYmZhPYLQAK9yjpfzhoDPI1IpdC-w7oN5jUxqZlNZT6XNx26HfJkqt8QVenSyz65Z46Io5xwd3g=s1600" width="300">
+</p>
 
 
 
