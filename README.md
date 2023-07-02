@@ -2,6 +2,9 @@
 
 <p>projek ini merupakan projek uas mata kuliah pemrograman mobile dan praktikum pemrograman mobile </p>
 
+## hasil build aplikasi
+<a href="https://drive.google.com/file/d/1-PoITk77B9NGD-2aOwuIMileJDf-Mtua/view?usp=sharing">Download Aplikasi </a>
+
 <p> berikut merupakan tampilan dari aplikasi </p>
 <p align="center">
 <img src="https://lh3.googleusercontent.com/drive-viewer/AFGJ81p8KaR1S_MxDyci38pFbK8zEfyYU4Czfgq_N6Jy7v4IUy7ugYWSiwxtSlp8Rk01VWfpdD3Au7gGihHxpTQN_mJ6BrRogw=s1600" width="100%">
